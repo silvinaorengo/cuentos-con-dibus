@@ -1,0 +1,112 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>App 	cuentos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="jquery.mobile-1.4.5.css">
+<link rel="stylesheet" href="jquery.mobile.icons.min.css">
+<!--<script src="themes/jquery.mobile.icons.min.js"></script>-->
+<link rel="stylesheet" href="themes/capricho.css">
+<link rel="stylesheet" href="themes/capricho.min.css">
+<link rel="stylesheet" href="jquery.mobile-1.4.5.css">
+<script src="jquery-1.12.2.min.js"></script>
+<script src="jquery.mobile-1.4.5.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<link rel="stylesheet" href="style.css"/>
+<script src="javascript.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+</head>
+<body>
+<!-- Start of personajes -->
+<div data-role="page" id="personajes" data-transition="flip">
+
+	<div data-role="header" data-theme="c" class="elheader"><h1>arma cuentos<h1><a href="#"  class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-delete ui-btn-icon-notext cerrar">cerrar</a>
+	</div>	
+    
+<div role="main" class="ui-content"><p><span>Elegí un personaje</span></p><p>según tu capricho</p></div>
+
+<div class="ui-grid-a ui-responsive" id="grillapersonajes">
+<!-- Start pop up personajes-->
+<div data-role="popup" id="poppersonaje0" data-corners="false" class="ventana"></div>
+<div data-role="popup" id="poppersonaje1" data-corners="false" class="ventana"></div>
+<div data-role="popup" id="poppersonaje2" data-corners="false" class="ventana"></div>
+<div data-role="popup" id="poppersonaje3" data-corners="false" class="ventana"></div>
+
+</div> 
+</div> 
+
+
+
+<!-- Start of lugares page -->
+
+<div data-role="page" id="lugares" data-transition="flip">
+
+<div data-role="header" data-theme="c" class="elheader"><a href="#personajes" data-transition="flow" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l ui-btn-icon-notext">anterior</a><h1>arma cuentos</h1><a href="#"  class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-delete ui-btn-icon-notext cerrar">cerrar</a></div>
+
+<div role="main" class="ui-content"><p><span>Elegí un lugar</span></p><p>según tu capricho</p></div>
+
+<div class="ui-grid-a ui-responsive" id="grillalugares">
+
+
+<!-- Start pop up lugares-->
+<div data-role="popup" id="poplugar0" data-corners="false" class="ventana"></div>
+<div data-role="popup" id="poplugar1" data-corners="false" class="ventana"></div>
+<div data-role="popup" id="poplugar2" data-corners="false" class="ventana"></div>
+<div data-role="popup" id="poplugar3" data-corners="false" class="ventana"></div>
+</div><!-- cierre grilla lugares-->
+
+</div><!-- cierre data role page-->
+
+
+<!-- Start page of tipos de final  -->
+
+<div data-role="page" id="finales" data-transition="flip">
+
+<div data-role="header" data-theme="c" class="elheader"><a href="#lugares" data-transition="flow" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l ui-btn-icon-notext">anterior</a>
+<a href="#"  class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-delete ui-btn-icon-notext cerrar">cerrar</a>
+<h1>arma cuentos</h1></div>
+
+<div role="main" class="ui-content"><p><span>Elegí un tipo de final</span></p><p>según tu capricho</p></div>
+
+<div class="ui-grid-a ui-responsive" id="grillafinales">
+<!-- Start pop up finales-->
+<div data-role="popup" id="popfinal0" data-corners="false" class="ventana"></div>
+<div data-role="popup" id="popfinal1" data-corners="false" class="ventana"></div>
+<div data-role="popup" id="popfinal2" data-corners="false" class="ventana"></div>
+<div data-role="popup" id="popfinal3" data-corners="false" class="ventana"></div>
+
+</div>
+</div>
+
+<!-- Start of cuento page -->
+
+<div data-role="page" id="cuento">	
+<div data-role="header" data-theme="c" class="elheader"><h1>cuentos cortos<h1><a href="#"  class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-delete ui-btn-icon-notext cerrar">cerrar</a>
+</div>
+
+<div role="main" class="ui-content">
+ 
+<p><span>Había una vez</span> </p>
+  
+<div id="elcuento"></div>
+
+<p><span>Fin</span> </p>  
+<img src="img/logo_app_transp.png" id="logoapp"> 
+<a href="#personajes" class="ui-btn" data-transition="flow" id="otrocuento">Quiero otro cuento</a> 
+
+<p><span>Podés tener tu lámpara con el personaje de esta historia</span> </p>  
+<img src="img/productos.png" id="productos">
+<img src="img/logo_trans.png" id="logo">
+<p><span>Lámparas con dibujitos</span> 
+
+</p> 
+
+</div>
+ 	
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family:'fishfingersregular';
+    src:url(tipografias/fishfingers-webfont.eot);
+    src:url(tipografias/Fishfingers.ttf);
+    src: url(tipografias/fishfingers-webfont.ttf);
+	src:url(tipografias/Fishfingers%20Light.ttf);
+     
+	font-weight: normal;
+    font-style: normal;
+}  
+@font-face {	
+    font-family: 'FVAlmeloRegular';
+    src:url(tipografias/FV_Almelo.ttf);
+	src:url(tipografias/fv_almelo-webfont.eot);
+	src:url(tipografias/fv_almelo-webfont.svg);
+	src:url(tipografias/fv_almelo-webfont.ttf);
+	src:url(tipografias/fv_almelo-webfont.woff);
+     font-weight: normal;
+    font-style: normal;
+}
+
+h1{ text-transform:uppercase;
+color:#999;
+font-family: 'FVAlmeloRegular';
+letter-spacing:2pt;	
+border:none;
+}
+
+h2{
+font-family: 'FVAlmeloRegular';
+letter-spacing:2pt;
+border:none;	
+}
+
+h3{text-align:center;
+font-family: 'fishfingersregular';
+font-weight:bold;
+text-transform:uppercase;
+font-size:1.8em;
+letter-spacing:5pt;
+color:#FFF;
+border:none;
+margin:0;
+padding:0;
+}
+
+.ventana{
+	background-color:#869ea5!important;
+	width:80%;
+	
+}
+.ui-block-a, .ui-block-b{
+	background-color:#FFF!important;
+}
+
+h4{ margin:0;
+	padding-bottom:15px!important;;
+	font-family:'FVAlmeloRegular';
+	text-align:center;
+	letter-spacing:3pt;
+
+	font-size:.8em;
+	font-style: normal;
+	border:none;
+	max-height:8px;
+	}
+
+img{
+	margin:0;
+	padding:0;
+	width:100%;
+	height:auto;
+}
+
+body{
+	margin:0;
+	padding:0;
+	color:#0F0;
+	background-color:#869ea5;
+	}
+	
+#personajes,#lugares,#finales,#cuento,#suscripcion{
+background-color:#869ea5;
+border:none;
+}
+.ui-content{
+	background-color:#869ea5;
+	margin: 0 2em;
+	padding:0;
+	border:none;
+}
+	
+.ui-content p span{
+	color:#fcf07e;
+	font-family: 'fishfingersregular';
+	font-weight:bold;
+	font-size:1.5em;
+	letter-spacing:5pt;
+	width:100%;
+	text-transform:uppercase;
+	border:none;
+}
+.ui-content p{
+	color:#FFF;
+	font-family: 'FVAlmeloRegular';
+	text-align:center;
+	letter-spacing:2pt;
+	color:#000;
+	font-size:1em;
+	border:none;
+}
+
+#elcuento p{
+font-family:'arial';
+font-size:1em;
+color:#FFF;
+text-align:justify;
+letter-spacing:1pt;
+border:none;
+font-style:normal;
+
+}
+form #textinput, form #email{
+font-family: 'FVAlmeloRegular';
+background-color:#cdddcd7;
+color:#60605d;
+}
+
+
+#otrocuento{
+	background-color:#fcf07e;
+	width:60%;
+	margin:0 auto;
+	
+}
+a.confirmar{
+width:80%;
+margin:0 auto;
+margin-top:2%;
+margin-bottom:2%;
+}
+
+.elheader{
+	height:2.5em;
+}
+
+
+
+
+
