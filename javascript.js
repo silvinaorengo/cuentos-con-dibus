@@ -5,7 +5,7 @@ $.support.cors = true;
 $.mobile.allowCrossDomainPages = true;
 });
 
-$(document).on('pagecreate', function(){
+$(document).ready(function(){
 /*
 $('.cerrar').click(function(){
 	if(navigator.app){
@@ -45,8 +45,7 @@ function mostrar_imgdibu(){
 
 		//creo dinamicamente el div de la grilla a o b segun si el nro de vuelta si es par o impar
 		if (i % 2 == 0){
-		$('#grillapersonajes').append("<div class='ui-block-a' id="+i+"></div>");
-	
+			$('#grillapersonajes').append("<div class='ui-block-a' id="+i+"></div>");
 		}
 			else{
 			$('#grillapersonajes').append("<div class='ui-block-b' id="+i+"></div>");
