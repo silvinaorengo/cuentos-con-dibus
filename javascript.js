@@ -5,6 +5,7 @@ $.support.cors = true;
 $.mobile.allowCrossDomainPages = true;
 });
 
+$(document).ready(function(){
 /*
 $('.cerrar').click(function(){
 	if(navigator.app){
@@ -334,7 +335,7 @@ location.href = "http://localhost/capricho/app/index.html";
 //agregar boton de cerrar navigator.app.exitApp();  es de cordova usar jquey para el evento
 
 
-//});/*cierre $(document).ready*/
+});/*cierre $(document).ready*/
 
 
 
