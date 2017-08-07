@@ -29,18 +29,10 @@ function mostrar_imgdibu(){
 	$.getJSON("http://www.capricholucero.xyz/app/traer_img_dibu.php", function(rutadibu,iddibu){
 	
 		$.each(rutadibu, function(i, campos){
-
-		//creo dinamicamente el div de la grilla a o b segun si el nro de vuelta si es par o impar
-		if (i % 2 == 0){
-			$('#grillapersonajes').append("<div class='ui-block-a' id="+i+"></div>");
-		}
-			else{
-			$('#grillapersonajes').append("<div class='ui-block-b' id="+i+"></div>");
-			}
-
+		
 		//coloco adentro dinamicamente la imagen de los personajes en la grilla con el vinculo para el popup 
-		var idpers='#'+i;
-		$(idpers).append('<div><a href="#poppersonaje'+i+'" data-rel="popup" data-position-to="window" data-transition="fade" data-inline="true"><img class="popphoto" src="http://www.capricholucero.xyz/app/img/'+campos.rutadibu+'"></a></div>');
+		var imgpers='#pers_img'+i;
+		$(imgpers).attr('src', 'http://www.capricholucero.xyz/app/img/'+campos.rutadibu);
 		
 		//guardo en un array cada ruta en cada vuelta del bucle cada posicion de este array tiene el nombre del id que viene de la base de datos	
 			var posruta=campos.iddibu;
