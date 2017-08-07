@@ -51,8 +51,8 @@ function llenarpopup_pers(){
 //coloco el nombre de los LUGARES a los popup	
 	$.getJSON("http://www.capricholucero.xyz/app/traer_nombre_dibu.php", function(nombredibu){
 			$.each(nombredibu, function(i, campos){
-			var idpoppers = '#poppersonaje' + i;
-			$(idpoppers).append('<a href="#finales" data-rel="back" class="ui-btn-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">close</a><h3>'+campos.nombredibu+'</h3>');
+				var idpoppers = '#titulo_per' + i;
+				$(idpoppers).html(campos.nombredibu);
 			});/*cierre $.each*/
 });/*cierre $.getJSON*/
 };/*cierre funcion*/
