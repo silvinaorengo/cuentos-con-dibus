@@ -14,7 +14,7 @@ $('.cerrar').click(function(){
 	};
 });
 
-$(document).ready(function(){
+$(document).on('pageinit', function(){
 
 //arrays que guardan todos los datos posibles de los personajes para el cuento
 var imgpers=new Array();
