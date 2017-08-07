@@ -6,18 +6,6 @@ $.mobile.allowCrossDomainPages = true;
 });
 
 $(document).ready(function(){
-/*
-$('.cerrar').click(function(){
-	if(navigator.app){
-		navigator.app.exitApp();
-	}
-	else if(device){
-		device.exitApp();
-	};
-});
-
-$(document).on('pageinit', function(){
-*/
 
 //arrays que guardan todos los datos posibles de los personajes para el cuento
 var imgpers=new Array();
@@ -38,7 +26,6 @@ var cuento;
 
 //PAGINA PERSONAJES**************************************************************************
 function mostrar_imgdibu(){
-	//$.getJSON("http://localhost/capricho/app/traer_img_dibu.php", function(rutadibu, iddibu){		
 	$.getJSON("http://www.capricholucero.xyz/app/traer_img_dibu.php", function(rutadibu,iddibu){
 	
 		$.each(rutadibu, function(i, campos){
@@ -58,10 +45,7 @@ function mostrar_imgdibu(){
 		//guardo en un array cada ruta en cada vuelta del bucle cada posicion de este array tiene el nombre del id que viene de la base de datos	
 			var posruta=campos.iddibu;
 			imgpers[posruta]=campos.rutadibu;
-			var cantpos=imgpers.length-1;
-	
-		
-		
+			var cantpos = imgpers.length-1;
 		});/*cierre $.each*/
 	
 	});/*cierre $.getJSON*/	
@@ -136,7 +120,66 @@ function llenar_popup_pers(){
 			});/*cierre $.getJSON*/
 };/*cierre funcion*/
 
-llenar_popup_pers();
+//llenar_popup_pers();
+
+function llenarpopup_pers2(){
+	
+//coloco el nombre de los LUGARES a los popup	
+	$.getJSON("http://www.capricholucero.xyz/app/traer_nombre_dibu.php", function(nombredibu, iddibu){
+			$.each(nombredibu, function(i, campos){
+			var idpoppers='#poppersonaje'+i;
+			$(idpoppers).append('<a href="#finales" data-rel="back" class="ui-btn-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">close</a><h3>'+campos.nombredibu+'</h3>');
+			});/*cierre $.each*/
+
+
+
+	//coloco la descripcion de los lugares a los popup	
+	//$.getJSON("http://localhost/capricho/app/traer_descrip_lugar.php", function(descriplugar){
+	$.getJSON("http://www.capricholucero.xyz/app/traer_descrip_dibu.php", function(descripdibu, iddibu){
+		
+		$.each(descripdibu, function(i, campos){
+		var idpoppers='#poppersonaje'+i;
+		$(idpoppers).append('<h4>'+ campos.descripdibu +'</h4>');
+		});/*cierre $.each*/
+		
+	
+		
+	//coloco la imagen de los lugares y el boton de confirmar a los popup
+	$.getJSON("http://www.capricholucero.xyz/app/traer_img_dibu.php", function(rutadibu, iddibu){
+					
+			$.each(rutadibu, function(i, campos){
+				var idpoppers='#poppersonaje'+i;	
+				var btnpers='btnpersonaje'+i;	
+				
+			$(idpoppers).append('<img src="http://www.capricholucero.xyz/app/img/'+campos.rutalugar+'"><a href="#finales" class="ui-btn ui-btn-corner-all confirmar" data-transition="flip" id='+btnpers+'>confirmar personaje</a>');
+
+
+ 							var idbtnpers='#'+ btnpers;
+					
+							$(idbtnpers).click(function(){							
+							posnombre=campos.iddibu;
+							perselegido=pers[posnombre];
+							//alert(perselegido);
+							localStorage.setItem('nombrepersonaje',perselegido);
+								
+			
+							posdescrip=campos.iddibu;
+							descripelegida=persdescrip[posdescrip];
+							//alert(descripelegida);
+					
+							//guardar offline
+							localStorage.setItem('descripcionpersonaje',descripelegida);					
+							});	/*cierre evento click*/
+
+
+
+			});/*cierre $.each*/			
+		
+});/*cierre $.getJSON*/
+});/*cierre $.getJSON*/	
+});/*cierre $.getJSON*/
+};/*cierre funcion*/
+llenarpopup_pers2();
 
 //PAGINA LUGARES*************************************************************************
 
