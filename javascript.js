@@ -5,7 +5,7 @@ $.support.cors = true;
 $.mobile.allowCrossDomainPages = true;
 });
 
-$(document).ready(function(){
+$(document).on('pagecreate', function(){
 /*
 $('.cerrar').click(function(){
 	if(navigator.app){
