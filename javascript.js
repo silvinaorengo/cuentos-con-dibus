@@ -5,6 +5,7 @@ $.support.cors = true;
 $.mobile.allowCrossDomainPages = true;
 });
 
+/*
 $('.cerrar').click(function(){
 	if(navigator.app){
 		navigator.app.exitApp();
@@ -15,6 +16,7 @@ $('.cerrar').click(function(){
 });
 
 $(document).on('pageinit', function(){
+*/
 
 //arrays que guardan todos los datos posibles de los personajes para el cuento
 var imgpers=new Array();
@@ -332,7 +334,7 @@ location.href = "http://localhost/capricho/app/index.html";
 //agregar boton de cerrar navigator.app.exitApp();  es de cordova usar jquey para el evento
 
 
-});/*cierre $(document).ready*/
+//});/*cierre $(document).ready*/
 
 
 
